@@ -40,7 +40,7 @@ clean:
 ## Make Dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) Predictive\ Maintenance/data/make_dataset.py https://data.nasa.gov/download/brfb-gzcv/application%2Fzip data/raw bearings.zip
+	$(PYTHON_INTERPRETER) Predictive\ Maintenance/data/make_dataset.py https://phm-datasets.s3.amazonaws.com/NASA/4.+Bearings.zip data/raw bearings.zip
 
 #################################################################################
 # Documentation RULES                                                           #
