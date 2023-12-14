@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Predictive Maintenance"
+version = "0.0.1"
+description = "This project is dedicated to evaluating the viability of implementing predictive maintenance in a manufacturing environment. The approach integrates data analytics and machine learning to forecast equipment failures proactively. Through the meticulous collection and analysis of data from sensors and equipment, the goal is to refine maintenance schedules, mitigate unplanned downtime, and elevate the overall operational efficiency of the manufacturing process. The project seeks to demonstrate the tangible benefits of predictive maintenance, emphasizing its potential to optimize resource allocation and improve the overall reliability of manufacturing operations."
+authors = [
+  { name = "Kasper Schou Telkamp", email = "your@email.com" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = "~=3.10"
+dynamic = ["dependencies", "optional-dependencies"]
+
+[tool.setuptools]
+packages = ["Predictive Maintenance"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.dynamic.optional-dependencies]
+dev = {file = ['requirements_dev.txt']}
+
+[tool.ruff]
+line-length = 120
