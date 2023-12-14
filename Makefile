@@ -4,7 +4,7 @@
 
 PROJECT_NAME = predictive_maintenance
 PYTHON_VERSION = 3.10
-PYTHON_INTERPRETER = python
+PYTHON_INTERPRETER = python3
 
 #################################################################################
 # COMMANDS                                                                      #
@@ -20,7 +20,6 @@ create_environment:
 requirements:
 	$(PYTHON_INTERPRETER) -m pip install -U pip setuptools wheel
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
-	$(PYTHON_INTERPRETER) -m pip install .
 
 ## Install Developer Python Dependencies
 .PHONY: dev_requirements
@@ -41,7 +40,7 @@ clean:
 ## Make Dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) src/data/make_dataset.py https://data.nasa.gov/download/brfb-gzcv/application%2Fzip data/raw
+	$(PYTHON_INTERPRETER) Predictive\ Maintenance/data/make_dataset.py https://data.nasa.gov/download/brfb-gzcv/application%2Fzip data/raw bearings.zip
 
 #################################################################################
 # Documentation RULES                                                           #
