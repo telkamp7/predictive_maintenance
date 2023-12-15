@@ -1,2 +1,0 @@
-from predictive_maintenance.models.model import MyNeuralNet
-from predictive_maintenance.predict_model import predict
